@@ -1,0 +1,50 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Montserrat', sans-serif;
+ }
+
+ body{
+    background-color: #fff;
+ }
+ h1{
+    padding: 30px;
+    background-color: #d4d4d4;
+    text-align: center;
+}
+
+label{
+    display: block;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 18px;
+}
+input{
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #8b8b8b;
+}
+form{
+    background-color: #d4d4d4;
+    max-width: 600px;
+    border-radius: 5px;
+    margin: 100px auto;
+    padding: 80px;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, .8)   
+}
+button{
+    cursor: pointer;
+    padding: 8px;
+    
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input[type="check"]{
+    margin: 8px;
+}
