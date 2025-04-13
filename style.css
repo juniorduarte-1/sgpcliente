@@ -49,6 +49,10 @@ button{
 .endereco{
     padding: 20px;
 }
+.detalhe{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 input[type="text"]{
     width: 100%;
