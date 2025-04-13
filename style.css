@@ -69,6 +69,11 @@ input[type="checkbox"]{
     .content{
         grid-template-columns: 1fr;
     }
+    h1{
+        padding: 15px;
+        background-color: #d4d4d4;
+        text-align: center;
+    }
     
 }
 
