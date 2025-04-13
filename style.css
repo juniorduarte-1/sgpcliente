@@ -48,3 +48,15 @@ button{
 input[type="check"]{
     margin: 8px;
 }
+@media (max-width: 680px){
+
+    .content{
+        grid-template-columns: 1fr ;
+    }
+    input[type="text"]{
+        width: 100%;
+    }
+    form{
+        max-width: 360px;  
+    }
+}
