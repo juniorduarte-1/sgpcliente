@@ -13,7 +13,7 @@
     <form id="meuFormulario" action="" class="">        
     <h1 class="">Cadastro de Cliente</h1>
         <div class="content">
-            <div>
+            <div class="pessoal">
                     <label for="nome" class="">Nome Completo</label>
                     <input type="text" id="nome" class="">
                     <label for="cpf" class="">CPF</label>
@@ -25,7 +25,7 @@
                     <label for="email" class="">Email</label>
                     <input type="text" id="email">                
                 </div>
-                <div> 
+                <div class="endereco"> 
                     <label for="cep" class="">CEP</label>
                     <input type="text" id="cep">
                     <label for="endereco" class="">Endereço</label>
@@ -34,8 +34,11 @@
                     <input type="text" id="numero">
                     <label for="referencia" class="">Ponto de Referência</label>
                     <input type="text" id="referencia">
+                    <label for="vendedor">Vendedor</label>
+                    <input type="text" id="vendedor">
                 </div>
-                <div>
+                <div class="outros">
+                    <div>
                     <label for="plano" class="">Planos</label>
                     <select name="" id="planos">
                         <option value="50MB">50MB</option>
@@ -43,6 +46,8 @@
                         <option value="200MB">200MB</option>
                         <option value="Outros">Outros</option>
                     </select>
+                </div>
+                <div>
                     <label for="pagamento" class="">Pagamento</label>
                     <select name="" id="pagamento">
                         <option value="5">05</option>
@@ -52,10 +57,16 @@
                         <option value="25">25</option>
                         <option value="30">30</option>
                     </select>
-                    <label for="" class="">Possui Roteador?</label>
-                    <input type="checkbox" id="sim"><span>SIM</span>
-                    <input type="checkbox" id="nao"><span>NÃO</span>
                 </div>
+                <div>
+                    <label for="" class="">Possui Roteador?</label>
+                    <div>
+                        <input type="checkbox" id="sim"><span>SIM</span>
+                        <input type="checkbox" id="nao"><span>NÃO</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <button onclick="enviarParaWhatsapp()">Cadastrar</button>
 
@@ -106,6 +117,7 @@
             let endereco = document.getElementById('endereco').value;
             let numero = document.getElementById('numero').value;
             let referencia = document.getElementById('referencia').value;
+            let vendedor = document.getElementById('vendedor').value;
             let planos = document.getElementById('planos').value;
             let pagamento = document.getElementById('pagamento').value;
 
@@ -123,7 +135,7 @@
         // Se for "Outros" — muda o texto
         let planoTexto = planoSelecionado === "Outros" ? "Interesse nos Planos Turbo" : planoSelecionado;
 
-            let texto = `*OBA.. NOVO CLIENTE!* \n\n*Nome:* ${nome}\n*CPF:* ${cpf}\n*Data Nasc:* ${datanasc}\n*Celular:* ${fone}\n*Email:* ${email}\n*CEP:* ${cep}\n*Endereço:* ${endereco}\n*Nº:* ${numero}\n*Ponto de Referência:* ${referencia}\n*Plano:* ${planoTexto}\n*Pagamento:* ${pagamento}\n*Tem Roteador?:* ${roteador}`;
+            let texto = `*OBA.. NOVO CLIENTE!* \n\n*Nome:* ${nome}\n*CPF:* ${cpf}\n*Data Nasc:* ${datanasc}\n*Celular:* ${fone}\n*Email:* ${email}\n*CEP:* ${cep}\n*Endereço:* ${endereco}\n*Nº:* ${numero}\n*Ponto de Referência:* ${referencia}\n*Plano:* ${planoTexto}\n*Pagamento:* ${pagamento}\n*Tem Roteador?:* ${roteador}\n\n\n*Cadastrado por:* ${vendedor}`;
     
             let number1 = "5581984473038"
             let number2 = ""
